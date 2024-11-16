@@ -1,0 +1,46 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 36,
+    "reload_style_on_change": true,
+    
+    "modules-left": [
+        "custom/menu",    
+        "wlr/taskbar"
+    ],
+    "modules-center": [
+        "clock",
+        "tray"
+    ],
+    "modules-right": [
+        "hyprland/language"
+    ],
+
+
+    "hyprland/language": {
+        "format": "{}",
+        "format-en": "en",
+        "format-ru": "ru",
+        "format-uk": "ua"
+    },
+    "custom/menu": {
+        "format": "{icon}",
+        "format-icons": " ",
+        "on-click": "rofi -show drun",
+        "escape": true
+    },
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 18,
+        "tooltip": true,
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "ignore-list": [
+            "kitty"
+        ],
+        "app_ids-mapping": {
+            "firefoxdeveloperedition": "firefox-developer-edition"
+        }
+    }
+}
