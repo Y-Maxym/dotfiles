@@ -25,7 +25,7 @@
     },
     "custom/menu": {
         "format": "{icon}",
-        "format-icons": " ",
+        "format-icons": "",
         "on-click": "rofi -show drun",
         "escape": true
     },
