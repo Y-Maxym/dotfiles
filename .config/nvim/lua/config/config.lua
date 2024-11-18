@@ -1,3 +1,4 @@
+
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.g.mapleader = " "
@@ -12,6 +13,3 @@ vim.o.mouse = 'a'
 
 vim.opt.clipboard = "unnamedplus"
 
-require("config.config")
-require("config.lazy")
-require("config.mappings")
