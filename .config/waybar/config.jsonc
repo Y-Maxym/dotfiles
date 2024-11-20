@@ -9,14 +9,65 @@
         "wlr/taskbar"
     ],
     "modules-center": [
+        "mpd",
         "clock",
         "tray"
     ],
     "modules-right": [
-        "hyprland/language"
+        "keyboard-state",
+        "hyprland/language",
+        "backlight",
+        "pulseaudio",
+        "network",
+        "cpu",
+        "memory",
+        "temperature",
+        "battery",
+        "custom/power"
     ],
-
-
+    "tray": {
+	    "icon-size": 18,
+	    "spacing": 10
+    },    
+    "clock": {
+        "format": "{:%H:%M}",
+        "tooltip-format": "<small><tt>{calendar}</tt></small>",
+        "format-alt": "{:%d-%m-%Y}"
+    },
+    "mpd": {
+        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
+        "format-disconnected": "Disconnected ",
+        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+        "unknown-tag": "N/A",
+        "interval": 5,
+        "consume-icons": {
+            "on": " "
+        },
+        "random-icons": {
+            "off": "<span color=\"#f53c3c\"></span> ",
+            "on": " "
+        },
+        "repeat-icons": {
+            "on": " "
+        },
+        "single-icons": {
+            "on": "1 "
+        },
+        "state-icons": {
+            "paused": "",
+            "playing": ""
+        },
+        "tooltip-format": "MPD (connected)",
+        "tooltip-format-disconnected": "MPD (disconnected)"
+    },
+    "keyboard-state": {
+        "capslock": true,
+        "format": "{icon}",
+        "format-icons": {
+            "locked": "! ",
+            "unlocked": " "
+        }
+    },
     "hyprland/language": {
         "format": "{}",
         "format-en": "en",
@@ -25,7 +76,7 @@
     },
     "custom/menu": {
         "format": "{icon}",
-        "format-icons": "",
+        "format-icons": " ",
         "on-click": "rofi -show drun",
         "escape": true
     },
@@ -42,5 +93,17 @@
         "app_ids-mapping": {
             "firefoxdeveloperedition": "firefox-developer-edition"
         }
+    },
+    "cpu": {
+        "format": " {usage}%",
+        "on-click": "kitty -e htop"
+    },
+    "memory": {
+        "format": "{}% "
+    },
+    "temperature": {
+        "critical-threshold": 80,
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": ["", "", ""]
     }
 }
