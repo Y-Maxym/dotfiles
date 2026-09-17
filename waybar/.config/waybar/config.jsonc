@@ -1,0 +1,32 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+
+    "modules-left": [],
+    "modules-center": [],
+    "modules-right": ["backlight", "custom/nightlight", "pulseaudio", "clock"],
+
+    "backlight" : {
+	"format": "{percent}% {icon}",
+	"format-icons": ["󰃜", "󰃛", "󰃚"]
+    },
+    "custom/nightlight": {
+	"exec": "~/.config/waybar/scripts/nightlight-status.sh",
+	"on-click": "~/.config/waybar/scripts/toggle-nightlight.sh",
+	"return-type": "json",
+	"interval": 2,
+	"format": "{text}"
+    },
+    "pulseaudio": {
+	"format": "{volume}% {icon}",
+	"format-muted": "󰝟",
+	"format-icons": {
+		"default": ["󰕿", "󰖀", "󰕾"]
+	},
+	"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+    },
+    "clock": {
+	"format": "{:%H:%M}"
+    }
+}
