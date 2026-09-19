@@ -34,3 +34,9 @@ hl.device({
     sensitivity = -0.5,
 })
 
+hl.device({
+    name          = "compx-nearlink-mouse-dongle-1",
+    sensitivity   = 0,
+    accel_profile = "flat",
+})
+

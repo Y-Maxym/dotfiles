@@ -5,18 +5,11 @@
 
     "modules-left": [],
     "modules-center": [],
-    "modules-right": ["backlight", "custom/nightlight", "pulseaudio", "clock"],
+    "modules-right": ["backlight", "pulseaudio", "clock"],
 
     "backlight" : {
 	"format": "{percent}% {icon}",
 	"format-icons": ["󰃜", "󰃛", "󰃚"]
-    },
-    "custom/nightlight": {
-	"exec": "~/.config/waybar/scripts/nightlight-status.sh",
-	"on-click": "~/.config/waybar/scripts/toggle-nightlight.sh",
-	"return-type": "json",
-	"interval": 2,
-	"format": "{text}"
     },
     "pulseaudio": {
 	"format": "{volume}% {icon}",

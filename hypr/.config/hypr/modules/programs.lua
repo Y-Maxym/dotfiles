@@ -7,7 +7,7 @@
 local terminal    = "kitty"
 local fileManager = "yazi"
 local menu        = "hyprlauncher"
-local browser     = "firefox"
+local browser     = "google-chrome-stable"
 
 return {
     terminal    = terminal,
