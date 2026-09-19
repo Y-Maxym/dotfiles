@@ -3,23 +3,106 @@
     "position": "top",
     "height": 30,
 
-    "modules-left": [],
-    "modules-center": [],
-    "modules-right": ["backlight", "pulseaudio", "clock"],
+    "modules-left": ["custom/menu", "hyprland/workspaces"],
+    "modules-center": ["hyprland/window", "tray"],
+    "modules-right": ["hyprland/language", "cpu", "memory", "temperature", "network", "bluetooth", "backlight", "pulseaudio", "clock", "battery"],
+
+    "custom/menu": {
+        "format": "",
+        "on-click": "rofi -show drun",
+        "tooltip": false
+    },
+
+    "hyprland/workspaces": {
+        "format": "{id}{windows}",
+        "sort-by-number": true,
+        "persistent-workspaces": {
+            "*": 5
+        },
+        "workspace-taskbar": {
+            "enable": true
+        },
+        "icon-size": 16
+    },
+    
+    "hyprland/window": {
+        "format": "{title}",
+        "max-length": 50,
+        "separate-outputs": true
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 8
+    },
+
+    "hyprland/language": {
+        "format": "{}",
+        "format-en": "EN",
+        "format-ru": "RU",
+        "format-uk": "UA"
+    },
+
+    "cpu": {
+        "format": "{usage}% ",
+        "interval": 2,
+        "on-click": "kitty -e htop"
+    },
+
+    "temperature": {
+        "hwmon-path": "/sys/class/hwmon/hwmon6/temp1_input",
+        "critical-threshold": 80,
+        "format": "{temperatureC}°C ",
+        "interval": 2
+    },
+
+    "memory": {
+        "format": "{percentage}% ",
+        "interval": 5
+    },
+
+    "network": {
+        "format-wifi": "{signalStrength}% ",
+        "format-ethernet": "{ifname} 󰈁",
+        "format-disconnected": "\uf6ab",
+        "tooltip-format": "{ifname}: {ipaddr}/{cidr}"
+    },
+
+    "bluetooth": {
+        "format": "",
+        "format-disabled": "󰂲",
+        "format-connected": "{num_connections} ",
+        "tooltip-format": "{controller_alias}\t{controller_address}",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "on-click": "bash -c 'bluetoothctl show | grep -q \"Powered: yes\" && bluetoothctl power off || bluetoothctl power on'"
+    },
 
     "backlight" : {
-	"format": "{percent}% {icon}",
-	"format-icons": ["󰃜", "󰃛", "󰃚"]
+	    "format": "{percent}% {icon}",
+	    "format-icons": ["󰃜", "󰃛", "󰃚"]
     },
+
     "pulseaudio": {
-	"format": "{volume}% {icon}",
-	"format-muted": "󰝟",
-	"format-icons": {
-		"default": ["󰕿", "󰖀", "󰕾"]
-	},
-	"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+	    "format": "{volume}% {icon}",
+	    "format-muted": "󰝟",
+	    "format-icons": {
+		    "default": ["󰕿", "󰖀", "󰕾"]
+	    },
+    	"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
     },
+
     "clock": {
-	"format": "{:%H:%M}"
+	    "format": "{:%H:%M}"
+    },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-icons": ["", "", "", "", ""]
     }
 }
