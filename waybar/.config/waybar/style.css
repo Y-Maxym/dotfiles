@@ -1,0 +1,129 @@
+/* ===== Color variables ===== */
+@define-color bg-color rgba(20, 20, 25, 1);
+@define-color accent-color rgba(138, 180, 248, 1);
+@define-color accent-soft rgba(138, 180, 248, 0.3);
+@define-color text-color rgba(224, 224, 224, 1);
+@define-color text-muted rgba(85, 85, 85, 1);
+@define-color text-dark rgba(26, 26, 26, 1);
+
+/* ===== Base styles ===== */
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 13px;
+    font-weight: bold;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+/* ===== Shared capsule look (all top-level islands) ===== */
+#custom-notification,
+#custom-icon,
+#workspaces,
+#window,
+#language,
+#clock,
+#battery,
+#monitoring,
+#connectivity,
+#media,
+#tray {
+    background-color: @bg-color;
+    color: @text-color;
+    border-radius: 12px;
+    padding: 4px 12px;
+    margin: 4px 3px;
+}
+
+#launcher {
+    background-color: @bg-color;
+    border-radius: 12px;
+    margin: 4px 3px;
+    padding: 0;
+}
+
+/* Modules inside groups — no own background, to avoid a capsule inside a capsule */
+#launcher > widget > #custom-icon,
+#launcher > widget > #workspaces,
+#monitoring > widget > #cpu,
+#monitoring > widget > #memory,
+#monitoring > widget > #temperature,
+#connectivity > widget > #network,
+#connectivity > widget > #bluetooth,
+#media > widget > #backlight,
+#media > widget > #pulseaudio {
+    background-color: transparent;
+    padding: 4px 8px;
+    margin: 0;
+}
+
+/* ===== group/launcher: icon + workspaces ===== */
+#workspaces button {
+    color: @accent-color;
+    padding: 2px 8px;
+    border-radius: 8px;
+}
+
+#workspaces button.empty {
+    color: @text-muted;
+}
+
+#workspaces button.active {
+    background-color: @accent-soft;
+    color: #ffffff;
+}
+
+/* ===== hyprland/window ===== */
+
+/* ===== hyprland/language ===== */
+
+/* ===== group/monitoring: cpu, memory, temperature ===== */
+#cpu {
+    min-width: 45px;
+}
+
+#memory {
+    min-width: 45px;
+}
+
+#temperature {
+    min-width: 60px;
+}
+
+/* ===== group/connectivity: network, bluetooth ===== */
+#network {
+    min-width: 20px;
+}
+
+#bluetooth {
+    min-width: 20px;
+}
+
+#bluetooth.off {
+    color: @text-muted;
+}
+
+/* ===== group/media: backlight, pulseaudio ===== */
+#backlight {
+    min-width: 20px;
+}
+
+#pulseaudio {
+    min-width: 20px;
+}
+
+/* ===== clock ===== */
+#clock {
+    background-color: @accent-color;
+    color: @text-dark;
+}
+
+/* ===== battery ===== */
+
+/* ===== tray ===== */
+
+#custom-notification {
+    min-width: 20px;
+}

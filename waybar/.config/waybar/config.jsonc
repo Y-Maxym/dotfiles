@@ -1,34 +1,62 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 30,
+    "height": 44,
 
-    "modules-left": ["custom/menu", "hyprland/workspaces"],
-    "modules-center": ["hyprland/window", "tray"],
-    "modules-right": ["hyprland/language", "cpu", "memory", "temperature", "network", "bluetooth", "backlight", "pulseaudio", "clock", "battery"],
+    "modules-left": ["group/launcher", "hyprland/window"],
+    "modules-center": ["custom/notification", "clock","tray"],
+    "modules-right": ["hyprland/language", "group/monitoring", "group/connectivity", "group/media", "battery"],
 
-    "custom/menu": {
-        "format": "",
-        "on-click": "rofi -show drun",
+    "group/launcher": {
+        "orientation": "horizontal",
+        "modules": ["custom/icon", "hyprland/workspaces"]
+    },
+
+    "group/monitoring": {
+        "orientation": "horizontal",
+        "modules": ["cpu", "memory", "temperature"]
+    },
+
+    "group/connectivity": {
+        "orientation": "horizontal",
+        "modules": ["network", "bluetooth"]
+    },
+
+    "group/media": {
+        "orientation": "horizontal",
+        "modules": ["backlight", "pulseaudio"]
+    },
+
+    "custom/icon": {
+        "format": "",
         "tooltip": false
     },
 
     "hyprland/workspaces": {
-        "format": "{id}{windows}",
+        "format": "{id}",
         "sort-by-number": true,
         "persistent-workspaces": {
             "*": 5
-        },
-        "workspace-taskbar": {
-            "enable": true
-        },
-        "icon-size": 16
+        }
     },
     
     "hyprland/window": {
         "format": "{title}",
-        "max-length": 50,
+        "max-length": 30,
         "separate-outputs": true
+    },
+
+    "custom/notification": {
+        "exec": "swaync-client -swb",
+        "return-type": "json",
+        "format": "{icon}",
+        "format-icons": {
+            "notification": "\uf0f3",
+            "none": "\uf0f3",
+            "dnd-notification": "\uf1f6",
+            "dnd-none": "\uf1f6"
+        },
+        "on-click": "swaync-client -t -sw"
     },
 
     "tray": {
@@ -50,9 +78,10 @@
     },
 
     "temperature": {
-        "hwmon-path": "/sys/class/hwmon/hwmon6/temp1_input",
+        "hwmon-path-abs": ["/sys/devices/platform/coretemp.0/hwmon/"],
+        "input-filename": "temp1_input",
         "critical-threshold": 80,
-        "format": "{temperatureC}°C ",
+        "format": "{temperatureC}°C \uf2c9",
         "interval": 2
     },
 
@@ -62,16 +91,19 @@
     },
 
     "network": {
-        "format-wifi": "{signalStrength}% ",
+        "format-wifi": "{icon}",
+        "format-icons": {
+            "wifi": ["\uf1eb"]
+        },
         "format-ethernet": "{ifname} 󰈁",
         "format-disconnected": "\uf6ab",
-        "tooltip-format": "{ifname}: {ipaddr}/{cidr}"
+        "tooltip-format": "{ifname}: {ipaddr}/{cidr} ({signalStrength}%)"
     },
 
     "bluetooth": {
-        "format": "",
-        "format-disabled": "󰂲",
-        "format-connected": "{num_connections} ",
+        "format": "\uf294",
+        "format-disabled": "\uf294",
+        "format-connected": "{num_connections} \uf294",
         "tooltip-format": "{controller_alias}\t{controller_address}",
         "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
@@ -79,21 +111,23 @@
     },
 
     "backlight" : {
-	    "format": "{percent}% {icon}",
-	    "format-icons": ["󰃜", "󰃛", "󰃚"]
+	    "format": "{icon}",
+	    "format-icons": ["󰃜", "󰃛", "󰃚"],
+        "tooltip-format": "{percent}% {icon}"
     },
 
     "pulseaudio": {
-	    "format": "{volume}% {icon}",
+	    "format": "{icon}",
 	    "format-muted": "󰝟",
 	    "format-icons": {
 		    "default": ["󰕿", "󰖀", "󰕾"]
 	    },
+        "tooltip-format": "{icon} {volume}%",
     	"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
     },
 
     "clock": {
-	    "format": "{:%H:%M}"
+	    "format": "{:%d %b %I:%M %p}"
     },
 
     "battery": {
