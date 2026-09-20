@@ -1,0 +1,5 @@
+google-chrome
+sddm-theme-sugar-candy-git
+waybar-git
+yay
+yay-debug
