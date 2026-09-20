@@ -38,11 +38,6 @@
       "exec": "echo 'Do something...'",
       "urgency": "Normal"
     },
-    "notification-sound": {
-        "exec": "canberra-gtk-play -i message-new-instant 2>/dev/null || paplay /usr/share/sounds/freedesktop/stereo/message.oga",
-        "run-on": "receive",
-        "app-name": ".*"
-    },
     "example-action-script": {
       "app-name": "example.app.id",
       "exec": "echo 'Do something actionable!'",

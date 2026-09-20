@@ -18,6 +18,7 @@ hypridle
 hyprland
 hyprlock
 hyprpaper
+hyprpm
 hyprshot
 hyprsunset
 intel-media-driver
@@ -36,6 +37,7 @@ network-manager-applet
 networkmanager
 noto-fonts-emoji
 nvm
+pacman-contrib
 pipewire
 pipewire-alsa
 pipewire-jack
@@ -51,6 +53,7 @@ sddm
 slurp
 smartmontools
 sof-firmware
+steam
 stow
 sudo
 swaync
