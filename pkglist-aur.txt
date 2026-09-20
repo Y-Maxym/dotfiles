@@ -1,5 +1,7 @@
 google-chrome
+jetbrains-toolbox
 sddm-theme-sugar-candy-git
 waybar-git
 yay
 yay-debug
+zoom

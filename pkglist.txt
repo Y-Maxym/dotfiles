@@ -5,6 +5,9 @@ bluez
 bluez-utils
 brightnessctl
 cliphist
+discord
+docker
+docker-compose
 efibootmgr
 ffmpeg
 git
@@ -20,6 +23,7 @@ hyprsunset
 intel-media-driver
 intel-ucode
 kitty
+lazydocker
 less
 libpulse
 libva-intel-driver
@@ -31,11 +35,14 @@ neovim
 network-manager-applet
 networkmanager
 noto-fonts-emoji
+nvm
 pipewire
 pipewire-alsa
 pipewire-jack
 pipewire-pulse
 polkit-kde-agent
+pyenv
+python-pip
 qt5-wayland
 qt6-wayland
 rofi
@@ -47,7 +54,9 @@ sof-firmware
 stow
 sudo
 swaync
+telegram-desktop
 ttf-jetbrains-mono-nerd
+unzip
 uwsm
 vim
 vulkan-intel
@@ -64,4 +73,6 @@ xf86-video-ati
 xf86-video-nouveau
 yazi
 yt-dlp
+zip
 zram-generator
+zsh
