@@ -24,6 +24,17 @@
 -- See https://wiki.hypr.land/Configuring/Basics/Window-Rules/
 -- and https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
 
+-- Workspaces per monitor
+-- External monitor: 1–3
+hl.workspace_rule({ workspace = "1", monitor = "HDMI-A-1", default = true, persistent = true })
+hl.workspace_rule({ workspace = "2", monitor = "HDMI-A-1", persistent = true })
+hl.workspace_rule({ workspace = "3", monitor = "HDMI-A-1", persistent = true })
+
+-- Laptop screen: 4–6
+hl.workspace_rule({ workspace = "4", monitor = "eDP-1", default = true, persistent = true })
+hl.workspace_rule({ workspace = "5", monitor = "eDP-1", persistent = true })
+hl.workspace_rule({ workspace = "6", monitor = "eDP-1", persistent = true })
+
 -- Example window rules that are useful
 
 local suppressMaximizeRule = hl.window_rule({
@@ -48,6 +59,22 @@ hl.window_rule({
     },
 
     no_focus = true,
+})
+
+hl.window_rule({
+    name    = "btop-float",
+    match   = { class = "^(btop)$" },
+    float   = true,
+    center  = true,
+    size = "1400 900"
+})
+
+hl.window_rule({
+    name   = "bluetui-float",
+    match  = { class = "^(bluetui)$" },
+    float  = true,
+    center = true,
+    size   = "1000 600",
 })
 
 -- Layer rules also return a handle.

@@ -35,9 +35,7 @@
     "hyprland/workspaces": {
         "format": "{id}",
         "sort-by-number": true,
-        "persistent-workspaces": {
-            "*": 5
-        }
+        "all-outputs": true
     },
     
     "hyprland/window": {
@@ -74,7 +72,7 @@
     "cpu": {
         "format": "{usage}% ",
         "interval": 2,
-        "on-click": "kitty -e htop"
+        "on-click": "kitty --class btop -e btop"
     },
 
     "temperature": {
@@ -97,7 +95,9 @@
         },
         "format-ethernet": "{ifname} 󰈁",
         "format-disconnected": "\uf6ab",
-        "tooltip-format": "{ifname}: {ipaddr}/{cidr} ({signalStrength}%)"
+        "interval": 2,
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)\n{ifname}: {ipaddr}/{cidr}\n⇣ {bandwidthDownBytes}  ⇡ {bandwidthUpBytes}",
+        "tooltip-format-ethernet": "{ifname}: {ipaddr}/{cidr}\n⇣ {bandwidthDownBytes}  ⇡ {bandwidthUpBytes}"
     },
 
     "bluetooth": {
@@ -107,7 +107,8 @@
         "tooltip-format": "{controller_alias}\t{controller_address}",
         "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-        "on-click": "bash -c 'bluetoothctl show | grep -q \"Powered: yes\" && bluetoothctl power off || bluetoothctl power on'"
+        "on-click": "bluetoothctl show | grep -q 'Powered: yes' && bluetoothctl power off || { rfkill unblock bluetooth; bluetoothctl power on; }",
+        "on-click-right": "kitty --class bluetui -e bluetui"
     },
 
     "backlight" : {

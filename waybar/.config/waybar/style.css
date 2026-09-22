@@ -101,7 +101,10 @@ window#waybar {
     min-width: 20px;
 }
 
-#bluetooth.off {
+
+#bluetooth.off,
+#bluetooth.disabled, 
+#bluetooth.no-controller {
     color: @text-muted;
 }
 
