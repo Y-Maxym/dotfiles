@@ -104,7 +104,8 @@ window#waybar {
 
 #bluetooth.off,
 #bluetooth.disabled, 
-#bluetooth.no-controller {
+#bluetooth.no-controller,
+#pulseaudio.mic.source-muted {
     color: @text-muted;
 }
 

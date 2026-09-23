@@ -77,6 +77,14 @@ hl.window_rule({
     size   = "1000 600",
 })
 
+hl.window_rule({
+    name   = "wiremix-float",
+    match  = { class = "^(wiremix)$" },
+    float  = true,
+    center = true,
+    size   = "1000 600",
+})
+
 -- Layer rules also return a handle.
 -- local overlayLayerRule = hl.layer_rule({
 --     name  = "no-anim-overlay",
