@@ -128,7 +128,8 @@
 		    "default": ["󰕿", "󰖀", "󰕾"]
 	    },
         "tooltip-format": "{icon} {volume}%",
-    	"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+    	"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-click-right": "kitty --class wiremix -e wiremix"
     },
 
     "pulseaudio#mic": {
@@ -138,7 +139,6 @@
         "format-source-muted": "󰍭",
         "tooltip-format": "Microphone: {source_volume}%",
         "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
-        "on-click-right": "kitty --class wiremix -e wiremix",
         "on-scroll-up": "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SOURCE@ 2%+",
         "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 2%-"
     },

@@ -21,6 +21,11 @@ hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(programs.menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
 
+-- Super+F11: disable the Alt/Super swap
+hl.bind(mainMod .. " + F11", hl.dsp.exec_cmd([[hyprctl eval 'hl.config({ input = { kb_options = "grp:alt_shift_toggle" } })']]))
+
+-- Super+F12: enable the Alt/Super swap
+hl.bind(mainMod .. " + F12", hl.dsp.exec_cmd([[hyprctl eval 'hl.config({ input = { kb_options = "altwin:swap_alt_win,grp:alt_shift_toggle" } })']]))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))

@@ -8,6 +8,7 @@ brightnessctl
 btop
 cliphist
 discord
+dmidecode
 docker
 docker-compose
 efibootmgr
@@ -56,6 +57,7 @@ sddm
 slurp
 smartmontools
 sof-firmware
+steam
 stow
 sudo
 swaync
