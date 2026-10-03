@@ -146,7 +146,9 @@
     },
 
     "clock": {
-	    "format": "{:%d %b %I:%M %p}"
+        "format": "{:%d %b %I:%M %p}",
+        "tooltip": false,
+        "on-click-right": "pkill -f '^kitty --class calendar' || kitty --class calendar -o font_size=13 -o background_opacity=0.9 -e ~/.config/waybar/scripts/calendar.sh"
     },
 
     "battery": {
