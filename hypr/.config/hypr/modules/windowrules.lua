@@ -33,7 +33,6 @@ hl.workspace_rule({ workspace = "3", monitor = "HDMI-A-1", persistent = true })
 -- Laptop screen: 4–6
 hl.workspace_rule({ workspace = "4", monitor = "eDP-1", default = true, persistent = true })
 hl.workspace_rule({ workspace = "5", monitor = "eDP-1", persistent = true })
-hl.workspace_rule({ workspace = "6", monitor = "eDP-1", persistent = true })
 
 -- Example window rules that are useful
 
@@ -80,6 +79,14 @@ hl.window_rule({
 hl.window_rule({
     name   = "wiremix-float",
     match  = { class = "^(wiremix)$" },
+    float  = true,
+    center = true,
+    size   = "1000 600",
+})
+
+hl.window_rule({
+    name   = "wifitui-float",
+    match  = { class = "^(wifitui)$" },
     float  = true,
     center = true,
     size   = "1000 600",

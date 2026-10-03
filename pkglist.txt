@@ -1,4 +1,5 @@
 alsa-utils
+angband
 base
 base-devel
 bluetui
@@ -48,7 +49,6 @@ pipewire-jack
 pipewire-pulse
 polkit-kde-agent
 pyenv
-python-pip
 qt5-wayland
 qt6-wayland
 rofi
@@ -64,6 +64,7 @@ swaync
 telegram-desktop
 ttf-jetbrains-mono-nerd
 unzip
+uv
 uwsm
 vim
 vulkan-intel

@@ -2,6 +2,7 @@ google-chrome
 jetbrains-toolbox
 sddm-theme-sugar-candy-git
 waybar-git
+wifitui-bin
 yay
 yay-debug
 zoom
