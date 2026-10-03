@@ -13,7 +13,7 @@ hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(programs.fileManager))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(programs.browser))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(programs.menu))
 hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("cliphist list | rofi -dmenu -hover-select -me-select-entry '' -me-accept-entry 'MousePrimary' | cliphist decode | wl-copy"))
-hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("wlogout"))
+hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("pkill wlogout || wlogout -b 5 -T 545 -B 545 -L 400 -R 400"))
 
 ---- Notifications ----
 hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("swaync-client -t -sw"))
@@ -79,10 +79,10 @@ hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(),   { mouse = true })
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
 ---- Screenshots ----
-hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m region --clipboard-only"))
-hl.bind(mainMod .. " + CTRL + S", hl.dsp.exec_cmd("hyprshot -m region --clipboard-only"))
-hl.bind(mainMod .. " + PRINT", hl.dsp.exec_cmd("hyprshot -m window --clipboard-only"))
-hl.bind(mainMod .. " + SHIFT + PRINT", hl.dsp.exec_cmd("hyprshot -m output --clipboard-only"))
+hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd("hyprshot -m region --clipboard-only"))
+hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.exec_cmd("hyprshot -m window --clipboard-only"))
+hl.bind(mainMod .. " + CTRL + SHIFT + Q", hl.dsp.exec_cmd("hyprshot -m output --clipboard-only"))
+hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m output --clipboard-only"))
 
 ---- Multimedia keys ----
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"), { locked = true, repeating = true })
@@ -102,5 +102,5 @@ hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = tr
 -- Super+F11: disable the Alt/Super swap
 hl.bind(mainMod .. " + F11", hl.dsp.exec_cmd([[hyprctl eval 'hl.config({ input = { kb_options = "grp:alt_shift_toggle" } })']]))
 
--- Super+F12: enable the Alt/Super swap
-hl.bind(mainMod .. " + F12", hl.dsp.exec_cmd([[hyprctl eval 'hl.config({ input = { kb_options = "altwin:swap_alt_win,grp:alt_shift_toggle" } })']]))
+-- Super+Shift+F11: enable the Alt/Super swap
+hl.bind(mainMod .. " + SHIFT + F11", hl.dsp.exec_cmd([[hyprctl eval 'hl.config({ input = { kb_options = "altwin:swap_alt_win,grp:alt_shift_toggle" } })']]))

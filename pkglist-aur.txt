@@ -3,6 +3,6 @@ jetbrains-toolbox
 sddm-theme-sugar-candy-git
 waybar-git
 wifitui-bin
+wlogout
 yay
-yay-debug
 zoom

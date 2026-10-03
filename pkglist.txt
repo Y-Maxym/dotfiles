@@ -1,3 +1,4 @@
+7zip
 alsa-utils
 angband
 base
@@ -13,7 +14,9 @@ dmidecode
 docker
 docker-compose
 efibootmgr
+fd
 ffmpeg
+fzf
 git
 grim
 gst-plugin-pipewire
@@ -25,6 +28,7 @@ hyprpaper
 hyprpm
 hyprshot
 hyprsunset
+imagemagick
 intel-media-driver
 intel-ucode
 kitty
@@ -49,9 +53,12 @@ pipewire-alsa
 pipewire-jack
 pipewire-pulse
 polkit-kde-agent
+poppler
 pyenv
 qt5-wayland
 qt6-wayland
+resvg
+ripgrep
 rofi
 satty
 sddm
@@ -84,5 +91,6 @@ xf86-video-nouveau
 yazi
 yt-dlp
 zip
+zoxide
 zram-generator
 zsh
