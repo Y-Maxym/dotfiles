@@ -9,5 +9,6 @@
     ~/.config/swaync: .config/swaync
     ~/.config/waybar: .config/waybar
     ~/.config/uwsm: .config/uwsm
+    ~/.config/wlogout: .config/wlogout
     ~/.config/autostart/nm-applet.desktop: .config/autostart/nm-applet.desktop
     ~/.zshrc: .zshrc
