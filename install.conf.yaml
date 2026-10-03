@@ -1,0 +1,13 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+- link:
+    ~/.config/hypr: .config/hypr
+    ~/.config/kitty: .config/kitty
+    ~/.config/nvim: .config/nvim
+    ~/.config/swaync: .config/swaync
+    ~/.config/waybar: .config/waybar
+    ~/.config/uwsm: .config/uwsm
+    ~/.config/autostart/nm-applet.desktop: .config/autostart/nm-applet.desktop
+    ~/.zshrc: .zshrc

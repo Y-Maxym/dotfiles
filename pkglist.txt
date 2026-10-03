@@ -35,6 +35,7 @@ libva-intel-driver
 linux
 linux-firmware
 mkinitcpio
+mpv
 nano
 neovim
 network-manager-applet
@@ -58,10 +59,10 @@ slurp
 smartmontools
 sof-firmware
 steam
-stow
 sudo
 swaync
 telegram-desktop
+tree
 ttf-jetbrains-mono-nerd
 unzip
 uv
