@@ -78,6 +78,9 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 # Autosuggestions
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+# fzf: Ctrl+R history, Ctrl+T files, Alt+C directories
+source /usr/share/fzf/key-bindings.zsh
+
 # Starship
 eval "$(starship init zsh)"
 

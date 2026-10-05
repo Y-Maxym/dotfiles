@@ -55,7 +55,6 @@ pipewire-jack
 pipewire-pulse
 polkit-kde-agent
 poppler
-pyenv
 qt5-wayland
 qt6-wayland
 resvg
