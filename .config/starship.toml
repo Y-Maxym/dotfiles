@@ -1,0 +1,17 @@
+add_newline = false
+
+format = "$directory$git_branch$character"
+
+[character]
+success_symbol = "[\uf105](bold white)"
+error_symbol = "[\uf105](bold red)"
+
+[directory]
+style = "bold blue"
+truncation_length = 2
+truncate_to_repo = false
+
+[git_branch]
+format = '[‹](dimmed blue)[$branch](bold #8000ff)[›](dimmed blue) '
+truncation_length = 20
+truncation_symbol = "…"

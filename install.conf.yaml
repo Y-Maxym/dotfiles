@@ -11,4 +11,5 @@
     ~/.config/uwsm: .config/uwsm
     ~/.config/wlogout: .config/wlogout
     ~/.config/autostart/nm-applet.desktop: .config/autostart/nm-applet.desktop
+    ~/.config/starship.toml: .config/starship.toml
     ~/.zshrc: .zshrc
