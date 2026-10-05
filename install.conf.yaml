@@ -10,6 +10,7 @@
     ~/.config/waybar: .config/waybar
     ~/.config/uwsm: .config/uwsm
     ~/.config/wlogout: .config/wlogout
+    ~/.config/zsh: .config/zsh
     ~/.config/autostart/nm-applet.desktop: .config/autostart/nm-applet.desktop
     ~/.config/starship.toml: .config/starship.toml
     ~/.zshrc: .zshrc
