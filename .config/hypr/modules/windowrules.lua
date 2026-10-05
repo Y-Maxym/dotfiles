@@ -100,6 +100,13 @@ hl.window_rule({
     size   = "760 260",
 })
 
+hl.window_rule({
+    name   = "file-manager-yazi-float",
+    match  = { class = "^(yazi)$" },
+    float  = true,
+    center = true,
+    size   = "1000 600",
+})
 -- Layer rules also return a handle.
 -- local overlayLayerRule = hl.layer_rule({
 --     name  = "no-anim-overlay",

@@ -20,9 +20,9 @@ hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("swaync-client -t -sw"))
 hl.bind(mainMod .. " + SHIFT + N", hl.dsp.exec_cmd("swaync-client -C -sw"))
 
 ---- Window management ----
-local closeWindowBind = hl.bind(mainMod .. " + W", hl.dsp.window.close())
+local closeWindowBind = hl.bind(mainMod .. " + X", hl.dsp.window.close())
 -- closeWindowBind:set_enabled(false)
-hl.bind(mainMod .. " + SHIFT + W", hl.dsp.window.kill())               -- force kill
+hl.bind(mainMod .. " + SHIFT + X", hl.dsp.window.kill())               -- force kill
 hl.bind(mainMod .. " + F", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.fullscreen())
 hl.bind(mainMod .. " + C", hl.dsp.window.center())
@@ -66,8 +66,8 @@ hl.bind(mainMod .. " + CTRL + H", hl.dsp.focus({ workspace = "e-1" }))
 hl.bind(mainMod .. " + CTRL + L", hl.dsp.focus({ workspace = "e+1" }))
 
 -- Special workspace (scratchpad)
-hl.bind(mainMod .. " + S",         hl.dsp.workspace.toggle_special("magic"))
-hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
+hl.bind(mainMod .. " + Q",         hl.dsp.workspace.toggle_special("magic"))
+hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.window.move({ workspace = "special:magic" }))
 
 ---- Mouse ----
 -- Scroll through existing workspaces with mainMod + scroll
@@ -79,9 +79,9 @@ hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(),   { mouse = true })
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
 ---- Screenshots ----
-hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd("hyprshot -m region --clipboard-only"))
-hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.exec_cmd("hyprshot -m window --clipboard-only"))
-hl.bind(mainMod .. " + CTRL + SHIFT + Q", hl.dsp.exec_cmd("hyprshot -m output --clipboard-only"))
+hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("hyprshot -m region --clipboard-only"))
+hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("hyprshot -m window --clipboard-only"))
+hl.bind(mainMod .. " + CTRL + SHIFT + S", hl.dsp.exec_cmd("hyprshot -m output --clipboard-only"))
 hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m output --clipboard-only"))
 
 ---- Multimedia keys ----
