@@ -45,7 +45,7 @@ bindkey '^[[3~' delete-char            # Delete
 bindkey '^[[Z'  reverse-menu-complete  # Shift+Tab
 
 # --- Completion ---
-autoload -Uz compinit && compinit
+autoload -Uz compinit && compinit -d "${XDG_CACHE_HOME:-$HOME/.cache}/zsh/zcompdump"
 eval "$(dircolors -b)"
 zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'r:|=*' 'l:|=* r:|=*'
