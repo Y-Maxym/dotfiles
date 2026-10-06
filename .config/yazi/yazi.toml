@@ -1,0 +1,55 @@
+# Yazi 26.9.x: general behavior. Colors live in theme.toml.
+
+[mgr]
+# Panel widths, left to right: parent : current : preview
+ratio          = [1, 2, 4]
+# File order: natural understands numbers (1 < 2 < 10), directories go first
+sort_by        = "natural"
+sort_dir_first = true
+# Extra column right of file names: none by default, switch on demand (F1 for keys)
+linemode       = "none"
+
+[opener]
+# Named launchers. %s is replaced with the path of the selected file.
+# orphan = true: the program keeps running after yazi exits
+view = [
+  { run = 'imv %s', orphan = true, desc = "View" },
+]
+# exif: print file metadata (needs exiftool). block = true gives it the screen
+# until it exits; "read" waits for Enter so the output stays readable
+exif = [
+  { run = "clear; exiftool %s1; echo 'Press enter to exit'; read _", block = true, desc = "Show EXIF" },
+]
+
+# mpv: video/audio player. %s = one window with a playlist of all selected files;
+# use %s1 instead for a separate window per file (what the built-in "play" does)
+mpv = [
+  { run = 'mpv %s', orphan = true, desc = "Play" },
+]
+
+# mediainfo: technical details of audio/video (codecs, bitrate, duration).
+# Same pattern as exif: block = true gives it the screen, "read" waits for Enter
+mediainfo = [
+  { run = "clear; mediainfo %s1; echo 'Press enter to exit'; read _", block = true, desc = "Show media info" },
+]
+
+[open]
+# Which launcher handles which file type (MIME). prepend_rules are checked
+# before the built-in rules, so only images and audio/video change, the rest stays default
+prepend_rules = [
+    { mime = "image/*", use = [ "view", "exif" ] },
+    { mime = "{audio,video}/*", use = [ "mpv", "mediainfo", "exif" ] },
+]
+
+# Plugin fetchers: yazi runs them for the files shown in the list to collect
+# extra data. git.yazi gets the git status of every file (*) and directory (*/).
+# In one group only the first matching fetcher runs.
+[[plugin.prepend_fetchers]]
+url   = "*"
+run   = "git"
+group = "git"
+
+[[plugin.prepend_fetchers]]
+url   = "*/"
+run   = "git"
+group = "git"

@@ -1,0 +1,20 @@
+# Yazi 26.9.x: key bindings. Only additions on top of the built-in keys:
+# prepend_keymap is checked before them, so it wins on conflicts.
+
+[mgr]
+prepend_keymap = [
+	# Bookmark: g then . (built-in: g h = ~, g c = ~/.config, g d = ~/Downloads)
+	{ on = [ "g", "." ], run = "cd ~/dotfiles", desc = "Go ~/dotfiles" },
+
+	# New kitty window in the current directory, detached from yazi
+	{ on = "<C-t>", run = "shell --orphan -- kitty", desc = "Open kitty here" },
+
+	# diff.yazi: Space on file A, hover file B, then Alt+d (not Ctrl+d: it is page down)
+	{ on = "<A-d>", run = "plugin diff", desc = "Diff the selected with the hovered file" },
+
+	# toggle-pane.yazi: maximize / restore the preview pane
+	{ on = "T", run = "plugin toggle-pane max-preview", desc = "Maximize or restore the preview pane" },
+
+	# mount.yazi: disk manager (m mount, u unmount, e eject, q quit)
+	{ on = "M", run = "plugin mount", desc = "Mount manager" },
+]

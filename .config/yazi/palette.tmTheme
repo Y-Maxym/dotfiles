@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Palette</string>
+	<key>settings</key>
+	<array>
+		<dict>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#E0E0E0</string>
+				<key>background</key>
+				<string>#141419</string>
+				<key>caret</key>
+				<string>#8AB4F8</string>
+				<key>selection</key>
+				<string>#2A2A33</string>
+				<key>lineHighlight</key>
+				<string>#2A2A33</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Comment</string>
+			<key>scope</key>
+			<string>comment, punctuation.definition.comment</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#555555</string>
+				<key>fontStyle</key>
+				<string>italic</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>String</string>
+			<key>scope</key>
+			<string>string, punctuation.definition.string</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#81C995</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Number and constant</string>
+			<key>scope</key>
+			<string>constant.numeric, constant.language, constant.character, constant.other</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#FDD663</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Keyword and storage</string>
+			<key>scope</key>
+			<string>keyword, storage</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#C58AF9</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Function</string>
+			<key>scope</key>
+			<string>entity.name.function, support.function, meta.function-call</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#8AB4F8</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Type and class</string>
+			<key>scope</key>
+			<string>entity.name.type, entity.name.class, entity.other.inherited-class, support.type, support.class</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#78D9EC</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Tag</string>
+			<key>scope</key>
+			<string>entity.name.tag</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#F28B82</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Attribute name</string>
+			<key>scope</key>
+			<string>entity.other.attribute-name</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#FDD663</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Markup heading</string>
+			<key>scope</key>
+			<string>markup.heading, entity.name.section</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#8AB4F8</string>
+				<key>fontStyle</key>
+				<string>bold</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Markup inserted</string>
+			<key>scope</key>
+			<string>markup.inserted</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#81C995</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Markup deleted</string>
+			<key>scope</key>
+			<string>markup.deleted</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#F28B82</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Invalid</string>
+			<key>scope</key>
+			<string>invalid</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#F28B82</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

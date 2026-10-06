@@ -9,6 +9,7 @@
     ~/.config/swaync: .config/swaync
     ~/.config/waybar: .config/waybar
     ~/.config/rofi: .config/rofi
+    ~/.config/yazi: .config/yazi
     ~/.config/uwsm: .config/uwsm
     ~/.config/wlogout: .config/wlogout
     ~/.config/zsh: .config/zsh

@@ -1,0 +1,162 @@
+# Yazi 26.9.x: colors. Palette shared with kitty / waybar / rofi.
+# Only overrides are listed here, everything else comes from the built-in theme.
+# Note: [app] overall.bg is intentionally not set, so kitty transparency stays.
+
+[mgr]
+# Current path shown at the top
+cwd           = { fg = "#8ab4f8" }
+
+# Find (key /): matched part of the name, position among all matches
+find_keyword  = { fg = "#fdd663", bold = true, italic = true, underline = true }
+find_position = { fg = "#c58af9", bold = true, italic = true }
+
+# Markers: colored bar left of a row (fg = bg gives a solid bar)
+marker_selected = { fg = "#fdd663", bg = "#fdd663" }
+marker_copied   = { fg = "#81c995", bg = "#81c995" }
+marker_cut      = { fg = "#f28b82", bg = "#f28b82" }
+marker_marked   = { fg = "#c58af9", bg = "#c58af9" }
+
+# Counters of selected / copied / cut files
+count_selected = { fg = "#141419", bg = "#fdd663" }
+count_copied   = { fg = "#141419", bg = "#81c995" }
+count_cut      = { fg = "#141419", bg = "#f28b82" }
+
+# Vertical lines between the three panels
+border_style  = { fg = "#555555" }
+
+# Syntax highlighting in the code preview (own tmTheme file with palette colors)
+syntect_theme = "~/.config/yazi/palette.tmTheme"
+
+[tabs]
+# Tab bar (shown only with two or more tabs). Real bg colors, not "reset"
+active   = { fg = "#141419", bg = "#8ab4f8", bold = true }
+inactive = { fg = "#8ab4f8", bg = "#2a2a33" }
+
+[mode]
+# Mode pill in the status bar: main = bright part, alt = secondary part.
+# Both need real colors (not "reset"): the rounded ends are drawn with them.
+# Normal mode
+normal_main = { fg = "#141419", bg = "#8ab4f8", bold = true }
+normal_alt  = { fg = "#8ab4f8", bg = "#2a2a33" }
+# Select mode (visual selection, key v)
+select_main = { fg = "#141419", bg = "#fdd663", bold = true }
+select_alt  = { fg = "#fdd663", bg = "#2a2a33" }
+# Unset mode (visual deselection, key V)
+unset_main = { fg = "#141419", bg = "#f28b82", bold = true }
+unset_alt  = { fg = "#f28b82", bg = "#2a2a33" }
+
+[indicator]
+# Highlighted (hovered) row: `reversed` swaps text and background, so the bar
+# takes the color of the file type. Bold marks the active (middle) panel.
+parent  = { reversed = true }
+current = { reversed = true, bold = true }
+
+[status]
+# Permissions on the right: d/-/l type, r read, w write, x execute
+perm_sep   = { fg = "#555555" }
+perm_type  = { fg = "#81c995" }
+perm_read  = { fg = "#fdd663" }
+perm_write = { fg = "#f28b82" }
+perm_exec  = { fg = "#78d9ec" }
+# Progress bar of copy/move tasks
+progress_normal = { fg = "#81c995", bg = "#2a2a33" }
+progress_error  = { fg = "#141419", bg = "#f28b82" }
+
+[which]
+# Key hints after the first key of a chord (try pressing g and waiting)
+border          = { fg = "#8ab4f8" }
+cand            = { fg = "#78d9ec" }
+rest            = { fg = "#555555" }
+desc            = { fg = "#c58af9" }
+separator_style = { fg = "#555555" }
+
+[confirm]
+# Confirmation dialogs: trash (d), delete (D), overwrite, quit with running tasks
+border  = { fg = "#8ab4f8" }
+title   = { fg = "#8ab4f8" }
+btn_yes = { fg = "#141419", bg = "#8ab4f8", bold = true }
+btn_no  = { fg = "#8ab4f8", bg = "#2a2a33" }
+
+[spot]
+# File info table (key Tab)
+border   = { fg = "#8ab4f8" }
+title    = { fg = "#8ab4f8" }
+tbl_col  = { fg = "#8ab4f8" }
+tbl_cell = { fg = "#fdd663", reversed = true }
+
+[notify]
+# Notification popups: info / warning / error titles
+title_info  = { fg = "#81c995" }
+title_warn  = { fg = "#fdd663" }
+title_error = { fg = "#f28b82" }
+
+[pick]
+# "Open with" menu (key O)
+border = { fg = "#8ab4f8" }
+active = { fg = "#c58af9", bold = true }
+
+[input]
+# Input popups: create (a), rename (r), filter (f), find (/), shell (;)
+border = { fg = "#8ab4f8" }
+title  = { fg = "#8ab4f8" }
+
+[cmp]
+# Path completion popup inside inputs (Tab)
+border = { fg = "#8ab4f8" }
+active = { fg = "#c58af9", bold = true }
+
+[tasks]
+# Task manager (key w)
+border  = { fg = "#8ab4f8" }
+hovered = { fg = "#c58af9", bold = true }
+
+[help]
+# Key bindings help (key F1)
+border = { fg = "#8ab4f8" }
+chord  = { fg = "#78d9ec" }
+
+[filetype]
+# Replaces the whole built-in rule list, so every rule is repeated here with
+# palette colors. Rules are checked top to bottom, the first match wins.
+rules = [
+	# Image
+	{ mime = "**/image/*", fg = "#fdd663" },
+	# Media
+	{ mime = "**/{audio,video}/*", fg = "#c58af9" },
+	# Archive
+	{ mime = "**/application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#f28b82" },
+	# Document
+	{ mime = "**/application/{pdf,doc,rtf}", fg = "#78d9ec" },
+	# Virtual file system
+	{ mime = "vfs/{absent,stale}", fg = "#555555" },
+	# Special file
+	{ url = "*", is = "orphan", bg = "#f28b82" },
+	{ url = "*", is = "exec"  , fg = "#81c995" },
+	# Dummy file
+	{ url = "*", is = "dummy", bg = "#f28b82" },
+	{ url = "*/", is = "dummy", bg = "#f28b82" },
+	# Fallback: directories
+	{ url = "*/", fg = "#8ab4f8" }
+]
+
+[icon]
+# Icons have their own colors, separate from [filetype]. Priority when picking
+# an icon: globs > dirs > files > exts > conds. Only the generic folder icon is
+# recolored here (conds); language icons keep their built-in colors.
+# \uf07b = closed folder, \uf07c = open folder (hovered)
+prepend_conds = [
+	{ if = "dir & hovered", text = "\uf07c", fg = "#8ab4f8" },
+	{ if = "dir",           text = "\uf07b", fg = "#8ab4f8" },
+]
+
+[git]
+# git.yazi: colors of the status signs next to files
+unknown   = { fg = "#555555" }
+ignored   = { fg = "#555555" }
+untracked = { fg = "#c58af9" }
+unstaged  = { fg = "#fdd663" }
+staged    = { fg = "#81c995" }
+added     = { fg = "#81c995" }
+deleted   = { fg = "#f28b82" }
+updated   = { fg = "#78d9ec" }
+clean     = { fg = "#555555" }

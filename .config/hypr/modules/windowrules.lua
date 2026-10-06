@@ -108,6 +108,24 @@ hl.window_rule({
     size   = "1000 600",
 })
 
+-- imv: image viewer opened from yazi (Enter on an image), floating like yazi
+hl.window_rule({
+    name   = "image-viewer-imv-float",
+    match  = { class = "^(imv)$" },
+    float  = true,
+    center = true,
+    size   = "1000 600",
+})
+
+-- mpv: video player opened from yazi (Enter on a video), floating like imv
+hl.window_rule({
+    name   = "video-player-mpv-float",
+    match  = { class = "^(mpv)$" },
+    float  = true,
+    center = true,
+    size   = "1000 600",
+})
+
 -- Layer rules also return a handle.
 -- local overlayLayerRule = hl.layer_rule({
 --     name  = "no-anim-overlay",

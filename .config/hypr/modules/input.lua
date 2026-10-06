@@ -41,3 +41,8 @@ hl.device({
     accel_profile = "flat",
 })
 
+hl.device({
+    name          = "compx-atk-a9-2.0-nk-1",
+    sensitivity   = 0,
+    accel_profile = "flat",
+})

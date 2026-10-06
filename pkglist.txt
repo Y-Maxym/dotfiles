@@ -41,6 +41,7 @@ libpulse
 libva-intel-driver
 linux
 linux-firmware
+mediainfo
 mkinitcpio
 mpv
 nano
@@ -52,6 +53,7 @@ nvm
 obs-studio
 obsidian
 pacman-contrib
+perl-image-exiftool
 pipewire
 pipewire-alsa
 pipewire-jack
@@ -75,6 +77,7 @@ swaync
 telegram-desktop
 tree
 ttf-jetbrains-mono-nerd
+udisks2
 unzip
 uv
 uwsm

@@ -1,4 +1,4 @@
-# Core shell behavior: options, history, key bindings, completion
+# Core shell behavior: options, history, key bindings, completion, functions
 
 # --- Options ---
 unsetopt flowcontrol
@@ -51,3 +51,14 @@ zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'r:|=*' 'l:|=* r:|=*'
 zstyle ':completion:*' special-dirs true
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+
+# --- Functions ---
+# y: yazi wrapper. On quit with "q" the shell cd's into the directory yazi
+# ended in; "Q" quits without changing directory.
+function y() {
+  local tmp cwd; tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+  command yazi "$@" --cwd-file="$tmp"
+  IFS= read -r -d '' cwd < "$tmp"
+  [ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd" || builtin true
+  command rm -f -- "$tmp"
+}
