@@ -11,6 +11,9 @@ source /usr/share/fzf/key-bindings.zsh
 # Starship prompt
 eval "$(starship init zsh)"
 
+# zoxide: "z <dir>" jumps to frequently used directories (also feeds yazi's Z)
+eval "$(zoxide init zsh)"
+
 # Syntax highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
