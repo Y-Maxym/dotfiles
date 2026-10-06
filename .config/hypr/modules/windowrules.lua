@@ -107,6 +107,7 @@ hl.window_rule({
     center = true,
     size   = "1000 600",
 })
+
 -- Layer rules also return a handle.
 -- local overlayLayerRule = hl.layer_rule({
 --     name  = "no-anim-overlay",
@@ -128,4 +129,10 @@ hl.layer_rule({
     match = { namespace = "logout_dialog" },
     blur = true,
     ignore_alpha = 0
+})
+
+hl.layer_rule({
+    match = { namespace = "rofi" },
+    blur = true,
+    ignore_alpha = 0.5,
 })

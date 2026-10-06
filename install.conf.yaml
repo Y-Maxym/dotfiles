@@ -8,6 +8,7 @@
     ~/.config/nvim: .config/nvim
     ~/.config/swaync: .config/swaync
     ~/.config/waybar: .config/waybar
+    ~/.config/rofi: .config/rofi
     ~/.config/uwsm: .config/uwsm
     ~/.config/wlogout: .config/wlogout
     ~/.config/zsh: .config/zsh

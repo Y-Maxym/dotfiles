@@ -99,7 +99,7 @@
             "wifi": ["\uf1eb"]
         },
         "format-ethernet": "{ifname} 󰈁",
-        "format-disconnected": "\uf6ab",
+        "format-disconnected": "󱛅",
         "interval": 2,
         "tooltip-format-wifi": "{essid} ({signalStrength}%)\n{ifname}: {ipaddr}/{cidr}\n⇣ {bandwidthDownBytes}  ⇡ {bandwidthUpBytes}",
         "tooltip-format-ethernet": "{ifname}: {ipaddr}/{cidr}\n⇣ {bandwidthDownBytes}  ⇡ {bandwidthUpBytes}",

@@ -6,7 +6,7 @@
 -- Set programs that you use
 local terminal    = "kitty"
 local fileManager = "kitty --class yazi -e yazi"
-local menu        = "rofi -show drun"
+local menu        = "pkill -x rofi || rofi -show drun"
 local browser     = "google-chrome-stable"
 
 return {

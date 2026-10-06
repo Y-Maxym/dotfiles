@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+# Usage: screenshot.sh region | window | output
+mode="$1"
+
+notify() { notify-send -a Screenshot -t 2000 "Screenshot" "$1"; }
+
+freeze_pid=""
+freeze() {
+    command -v hyprpicker >/dev/null || return 0
+    hyprpicker -r -z >/dev/null 2>&1 &
+    freeze_pid=$!
+    sleep 0.2
+}
+unfreeze() { [[ -n "$freeze_pid" ]] && kill "$freeze_pid" 2>/dev/null; }
+trap unfreeze EXIT
+
+case "$mode" in
+    region)
+        freeze
+        geom=$(slurp -d -b '#14141966' -c '#8ab4f8' -w 2) || exit 0
+        ;;
+    window)
+        ws=$(hyprctl activeworkspace -j | jq '.id')
+        rects=$(hyprctl clients -j | jq -r --argjson ws "$ws" \
+            '.[] | select(.workspace.id == $ws and .mapped) | "\(.at[0]),\(.at[1]) \(.size[0])x\(.size[1])"')
+        if [[ -z "$rects" ]]; then
+            notify "No windows on this workspace"
+            exit 0
+        fi
+        freeze
+        geom=$(printf '%s\n' "$rects" | slurp -r -b '#14141966' -c '#8ab4f8' -w 2) || exit 0
+        ;;
+    output)
+        mon=$(hyprctl monitors -j | jq -r '.[] | select(.focused) | .name')
+        grim -o "$mon" - | wl-copy --type image/png && notify "Copied to clipboard"
+        exit 0
+        ;;
+    *)
+        echo "Usage: $0 region|window|output" >&2
+        exit 1
+        ;;
+esac
+
+[[ -z "$geom" ]] && exit 0
+grim -g "$geom" - | wl-copy --type image/png && notify "Copied to clipboard"

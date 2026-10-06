@@ -1,0 +1,79 @@
+@import "colors.rasi"
+
+* {
+    background-color: transparent;
+    text-color:       @fg;
+    font:             "JetBrainsMono Nerd Font Bold 12";
+}
+
+window {
+    location:         center;
+    anchor:           center;
+    width:            520px;
+    background-color: @bg;
+    border:           2px;
+    border-color:     @accent;
+    border-radius:    12px;
+}
+
+mainbox {
+    padding:  12px;
+    spacing:  10px;
+    children: [ inputbar, listview ];
+}
+
+inputbar {
+    padding:          10px 14px;
+    spacing:          10px;
+    background-color: @surface;
+    border-radius:    10px;
+    children:         [ prompt, entry ];
+}
+
+prompt {
+    text-color: @accent;
+}
+
+entry {
+    placeholder:       "Search...";
+    placeholder-color: @muted;
+}
+
+listview {
+    lines:        8;
+    columns:      1;
+    fixed-height: true;
+    scrollbar:    false;
+    spacing:      4px;
+}
+
+element {
+    padding:       8px 12px;
+    spacing:       12px;
+    border-radius: 10px;
+}
+
+element selected.normal {
+    background-color: @accent;
+    text-color:       @bg;
+}
+
+element normal.urgent,
+element selected.urgent {
+    text-color: @urgent;
+}
+
+element normal.active,
+element selected.active {
+    text-color: @active;
+}
+
+element-text {
+    vertical-align: 0.5;
+    text-color:     inherit;
+}
+
+element-icon {
+    size:       24px;
+    text-color: inherit;
+}
