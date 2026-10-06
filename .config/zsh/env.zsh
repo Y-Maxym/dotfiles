@@ -1,5 +1,8 @@
 # Environment and toolchains (order matters for PATH precedence)
 
+# Keep PATH free of duplicates (first occurrence wins)
+typeset -U PATH path
+
 # nvm (Node version manager)
 source /usr/share/nvm/init-nvm.sh
 
