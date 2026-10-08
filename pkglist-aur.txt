@@ -1,3 +1,4 @@
+bibata-cursor-theme-bin
 google-chrome
 jetbrains-toolbox
 sddm-theme-sugar-candy-git

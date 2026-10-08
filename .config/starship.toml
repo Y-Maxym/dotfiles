@@ -12,6 +12,7 @@ truncation_length = 2
 truncate_to_repo = false
 
 [git_branch]
-format = '[‹](dimmed blue)[$branch](bold #8000ff)[›](dimmed blue) '
+# purple = terminal ANSI color5 (comes from matugen via kitty)
+format = '[‹](dimmed blue)[$branch](bold purple)[›](dimmed blue) '
 truncation_length = 20
 truncation_symbol = "…"

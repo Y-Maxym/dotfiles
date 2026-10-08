@@ -13,6 +13,21 @@
     ~/.config/uwsm: .config/uwsm
     ~/.config/wlogout: .config/wlogout
     ~/.config/zsh: .config/zsh
+    ~/.config/matugen: .config/matugen
+    ~/.config/fontconfig: .config/fontconfig
     ~/.config/autostart/nm-applet.desktop: .config/autostart/nm-applet.desktop
     ~/.config/starship.toml: .config/starship.toml
     ~/.zshrc: .zshrc
+
+# Wallpapers folder for the wallpaper picker (not a standard XDG folder, nothing else creates it)
+- create:
+    - ~/Pictures/wallpapers
+
+# GTK appearance (dconf is a binary DB, so it is applied via gsettings instead of a config file)
+# Needs a running Hyprland session (dbus), run ./install from there
+- shell:
+    - [gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3-dark', Setting GTK theme]
+    - [gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark', Setting icon theme]
+    - [gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark', Setting dark color scheme]
+    - [gsettings set org.gnome.desktop.interface cursor-theme 'Bibata-Modern-Classic', Setting cursor theme]
+    - [gsettings set org.gnome.desktop.interface cursor-size 24, Setting cursor size]

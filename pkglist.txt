@@ -1,6 +1,8 @@
 7zip
+adw-gtk-theme
 alsa-utils
 angband
+awww
 base
 base-devel
 bluetui
@@ -14,6 +16,7 @@ dmidecode
 docker
 docker-compose
 efibootmgr
+fastfetch
 fd
 ffmpeg
 fzf
@@ -24,7 +27,6 @@ htop
 hypridle
 hyprland
 hyprlock
-hyprpaper
 hyprpicker
 hyprpm
 hyprsunset
@@ -41,6 +43,8 @@ libpulse
 libva-intel-driver
 linux
 linux-firmware
+man-db
+matugen
 mediainfo
 mkinitcpio
 mpv
@@ -53,6 +57,7 @@ nvm
 obs-studio
 obsidian
 pacman-contrib
+papirus-icon-theme
 perl-image-exiftool
 pipewire
 pipewire-alsa

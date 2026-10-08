@@ -3,3 +3,8 @@ if command -v zsh >/dev/null 2>&1; then
     eval "$_zenv"
     unset _zenv
 fi
+
+# Cursor theme (Bibata, Xcursor) - read by Hyprland, GTK, Qt, Xwayland apps
+export XCURSOR_THEME=Bibata-Modern-Classic
+export XCURSOR_SIZE=24
+export HYPRCURSOR_SIZE=24

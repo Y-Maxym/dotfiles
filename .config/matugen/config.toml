@@ -1,0 +1,75 @@
+[config]
+# Always use the most dominant color of the image (no interactive prompt, needed for scripts)
+source_color_index = 0
+
+# Set the wallpaper together with the colors (awww itself restores it on login)
+[config.wallpaper]
+set = true
+command = "awww img --transition-type grow --transition-duration 1.5 {{ image }}"
+
+[templates.kitty]
+input_path = "./templates/kitty-colors.conf"
+output_path = "./generated/kitty-colors.conf"
+# Ask running kitty windows to reload their config
+post_hook = "pkill -USR1 kitty"
+
+[templates.rofi]
+input_path = "./templates/rofi-colors.rasi"
+output_path = "./generated/rofi-colors.rasi"
+
+[templates.waybar]
+input_path = "./templates/waybar-colors.css"
+output_path = "./generated/waybar-colors.css"
+# Waybar reloads its style on SIGUSR2
+post_hook = "pkill -SIGUSR2 waybar"
+
+[templates.wlogout]
+input_path = "./templates/wlogout-colors.css"
+output_path = "./generated/wlogout-colors.css"
+
+[templates.swaync]
+input_path = "./templates/swaync-colors.css"
+output_path = "./generated/swaync-colors.css"
+# Reload swaync styles
+post_hook = "swaync-client --reload-css"
+
+[templates.hypr]
+input_path = "./templates/hypr-colors.lua"
+output_path = "./generated/hypr-colors.lua"
+# Reload Hyprland config so the new border colors apply
+post_hook = "hyprctl reload"
+
+[templates.hyprlock]
+input_path = "./templates/hyprlock-colors.conf"
+output_path = "./generated/hyprlock-colors.conf"
+
+[templates.screenshot]
+input_path = "./templates/screenshot-colors.sh"
+output_path = "./generated/screenshot-colors.sh"
+
+[templates.starship]
+input_path = "./templates/starship.toml"
+output_path = "./generated/starship.toml"
+
+[templates.yazi]
+input_path = "./templates/yazi-flavor.toml"
+output_path = "~/.config/yazi/flavors/matugen.yazi/flavor.toml"
+
+[templates.yazi_tmtheme]
+input_path = "./templates/yazi-tmtheme.xml"
+output_path = "~/.config/yazi/flavors/matugen.yazi/tmtheme.xml"
+
+# Fixed ANSI palette from the old theme (use the *_source variants: they stay the same for any wallpaper)
+[config.custom_colors]
+red = "#f28b82"
+yellow = "#fdd663"
+green = "#81c995"
+blue = "#8ab4f8"
+purple = "#c58af9"
+cyan = "#78d9ec"
+red_bright = "#f6aea9"
+yellow_bright = "#fde293"
+green_bright = "#a8dab5"
+blue_bright = "#aecbfa"
+purple_bright = "#d7aefb"
+cyan_bright = "#a1e4f2"

@@ -1,0 +1,10 @@
+/* Palette picker: the wallpaper grid (wallpaper.rasi) in one row, with palette cards instead of wallpapers */
+@import "wallpaper.rasi"
+
+listview {
+    lines: 1;
+}
+
+element-icon {
+    size: 140px;
+}

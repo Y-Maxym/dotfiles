@@ -13,6 +13,7 @@ hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(programs.fileManager))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(programs.browser))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(programs.menu))
 hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("pkill -x rofi || $HOME/.config/rofi/scripts/clipboard.sh"))
+hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("pkill -x rofi || $HOME/.config/matugen/scripts/wallpaper-palette.sh"))
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd([[pkill -x hyprpicker || { c=$(hyprpicker -a -f hex) && [ -n "$c" ] && notify-send -a Colorpicker "Color copied" "$c"; }]]))
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("pkill wlogout || wlogout -b 5 -T 545 -B 545 -L 400 -R 400"))
 

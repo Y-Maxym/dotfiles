@@ -1,0 +1,33 @@
+/* Wallpaper picker: same look as theme.rasi, but as a compact grid with thumbnails */
+@import "theme.rasi"
+
+window {
+    /* 3 * (icon + 16) + 2 * spacing + mainbox padding + border */
+    width: 700px;
+}
+
+listview {
+    columns:       3;
+    lines:         2;
+    /* Keep 3 columns even when there are fewer wallpapers than cells */
+    fixed-columns: true;
+    /* Window height follows the content */
+    fixed-height:  false;
+    /* Fill the grid row by row (left to right) */
+    flow:          horizontal;
+    spacing:       10px;
+}
+
+element {
+    orientation: vertical;
+    padding:     8px;
+}
+
+element-icon {
+    size:             200px;
+    horizontal-align: 0.5;
+}
+
+element-text {
+    horizontal-align: 0.5;
+}
