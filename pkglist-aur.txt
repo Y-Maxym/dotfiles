@@ -1,6 +1,7 @@
 bibata-cursor-theme-bin
 google-chrome
 jetbrains-toolbox
+linux-wallpaperengine-git
 sddm-theme-sugar-candy-git
 waybar-git
 wifitui-bin

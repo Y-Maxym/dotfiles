@@ -3,9 +3,10 @@
 source_color_index = 0
 
 # Set the wallpaper together with the colors (awww itself restores it on login)
+# Transition: growing circle from a random point, 60 fps
 [config.wallpaper]
 set = true
-command = "awww img --transition-type grow --transition-duration 1.5 {{ image }}"
+command = "awww img --transition-type any --transition-fps 60 --transition-duration 1.5 '{{ image }}'"
 
 [templates.kitty]
 input_path = "./templates/kitty-colors.conf"

@@ -6,9 +6,9 @@ format = "$directory$git_branch$character"
 palette = "matugen"
 
 [palettes.matugen]
-mg_accent = "#ffb688"
-mg_branch = "#cac993"
-mg_text = "#f0dfd7"
+mg_accent = "#ffb779"
+mg_branch = "#c3cb97"
+mg_text = "#efe0d6"
 mg_error = "#f28b82"
 
 [character]

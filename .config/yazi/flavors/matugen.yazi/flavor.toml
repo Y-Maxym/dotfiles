@@ -4,7 +4,7 @@
 
 [mgr]
 # Current path shown at the top
-cwd           = { fg = "#ffb688" }
+cwd           = { fg = "#ffb779" }
 
 # Find (key /): matched part of the name, position among all matches
 find_keyword  = { fg = "#fdd663", bold = true, italic = true, underline = true }
@@ -17,30 +17,30 @@ marker_cut      = { fg = "#f28b82", bg = "#f28b82" }
 marker_marked   = { fg = "#c58af9", bg = "#c58af9" }
 
 # Counters of selected / copied / cut files
-count_selected = { fg = "#19120d", bg = "#fdd663" }
-count_copied   = { fg = "#19120d", bg = "#81c995" }
-count_cut      = { fg = "#19120d", bg = "#f28b82" }
+count_selected = { fg = "#19120c", bg = "#fdd663" }
+count_copied   = { fg = "#19120c", bg = "#81c995" }
+count_cut      = { fg = "#19120c", bg = "#f28b82" }
 
 # Vertical lines between the three panels
-border_style  = { fg = "#52443c" }
+border_style  = { fg = "#51443a" }
 
 [tabs]
 # Tab bar (shown only with two or more tabs). Real bg colors, not "reset"
-active   = { fg = "#19120d", bg = "#ffb688", bold = true }
-inactive = { fg = "#ffb688", bg = "#312823" }
+active   = { fg = "#19120c", bg = "#ffb779", bold = true }
+inactive = { fg = "#ffb779", bg = "#312822" }
 
 [mode]
 # Mode pill in the status bar: main = bright part, alt = secondary part.
 # Both need real colors (not "reset"): the rounded ends are drawn with them.
 # Normal mode
-normal_main = { fg = "#19120d", bg = "#ffb688", bold = true }
-normal_alt  = { fg = "#ffb688", bg = "#312823" }
+normal_main = { fg = "#19120c", bg = "#ffb779", bold = true }
+normal_alt  = { fg = "#ffb779", bg = "#312822" }
 # Select mode (visual selection, key v)
-select_main = { fg = "#19120d", bg = "#fdd663", bold = true }
-select_alt  = { fg = "#fdd663", bg = "#312823" }
+select_main = { fg = "#19120c", bg = "#fdd663", bold = true }
+select_alt  = { fg = "#fdd663", bg = "#312822" }
 # Unset mode (visual deselection, key V)
-unset_main = { fg = "#19120d", bg = "#f28b82", bold = true }
-unset_alt  = { fg = "#f28b82", bg = "#312823" }
+unset_main = { fg = "#19120c", bg = "#f28b82", bold = true }
+unset_alt  = { fg = "#f28b82", bg = "#312822" }
 
 [indicator]
 # Highlighted (hovered) row: `reversed` swaps text and background, so the bar
@@ -50,35 +50,35 @@ current = { reversed = true, bold = true }
 
 [status]
 # Permissions on the right: d/-/l type, r read, w write, x execute
-perm_sep   = { fg = "#52443c" }
+perm_sep   = { fg = "#51443a" }
 perm_type  = { fg = "#81c995" }
 perm_read  = { fg = "#fdd663" }
 perm_write = { fg = "#f28b82" }
 perm_exec  = { fg = "#78d9ec" }
 # Progress bar of copy/move tasks
-progress_normal = { fg = "#81c995", bg = "#312823" }
-progress_error  = { fg = "#19120d", bg = "#f28b82" }
+progress_normal = { fg = "#81c995", bg = "#312822" }
+progress_error  = { fg = "#19120c", bg = "#f28b82" }
 
 [which]
 # Key hints after the first key of a chord (try pressing g and waiting)
-border          = { fg = "#ffb688" }
+border          = { fg = "#ffb779" }
 cand            = { fg = "#78d9ec" }
-rest            = { fg = "#52443c" }
+rest            = { fg = "#51443a" }
 desc            = { fg = "#c58af9" }
-separator_style = { fg = "#52443c" }
+separator_style = { fg = "#51443a" }
 
 [confirm]
 # Confirmation dialogs: trash (d), delete (D), overwrite, quit with running tasks
-border  = { fg = "#ffb688" }
-title   = { fg = "#ffb688" }
-btn_yes = { fg = "#19120d", bg = "#ffb688", bold = true }
-btn_no  = { fg = "#ffb688", bg = "#312823" }
+border  = { fg = "#ffb779" }
+title   = { fg = "#ffb779" }
+btn_yes = { fg = "#19120c", bg = "#ffb779", bold = true }
+btn_no  = { fg = "#ffb779", bg = "#312822" }
 
 [spot]
 # File info table (key Tab)
-border   = { fg = "#ffb688" }
-title    = { fg = "#ffb688" }
-tbl_col  = { fg = "#ffb688" }
+border   = { fg = "#ffb779" }
+title    = { fg = "#ffb779" }
+tbl_col  = { fg = "#ffb779" }
 tbl_cell = { fg = "#fdd663", reversed = true }
 
 [notify]
@@ -89,27 +89,27 @@ title_error = { fg = "#f28b82" }
 
 [pick]
 # "Open with" menu (key O)
-border = { fg = "#ffb688" }
+border = { fg = "#ffb779" }
 active = { fg = "#c58af9", bold = true }
 
 [input]
 # Input popups: create (a), rename (r), filter (f), find (/), shell (;)
-border = { fg = "#ffb688" }
-title  = { fg = "#ffb688" }
+border = { fg = "#ffb779" }
+title  = { fg = "#ffb779" }
 
 [cmp]
 # Path completion popup inside inputs (Tab)
-border = { fg = "#ffb688" }
+border = { fg = "#ffb779" }
 active = { fg = "#c58af9", bold = true }
 
 [tasks]
 # Task manager (key w)
-border  = { fg = "#ffb688" }
+border  = { fg = "#ffb779" }
 hovered = { fg = "#c58af9", bold = true }
 
 [help]
 # Key bindings help (key F1)
-border = { fg = "#ffb688" }
+border = { fg = "#ffb779" }
 chord  = { fg = "#78d9ec" }
 
 [filetype]
@@ -125,7 +125,7 @@ rules = [
 	# Document
 	{ mime = "**/application/{pdf,doc,rtf}", fg = "#78d9ec" },
 	# Virtual file system
-	{ mime = "vfs/{absent,stale}", fg = "#52443c" },
+	{ mime = "vfs/{absent,stale}", fg = "#51443a" },
 	# Special file
 	{ url = "*", is = "orphan", bg = "#f28b82" },
 	{ url = "*", is = "exec"  , fg = "#81c995" },
@@ -133,7 +133,7 @@ rules = [
 	{ url = "*", is = "dummy", bg = "#f28b82" },
 	{ url = "*/", is = "dummy", bg = "#f28b82" },
 	# Fallback: directories
-	{ url = "*/", fg = "#ffb688" }
+	{ url = "*/", fg = "#ffb779" }
 ]
 
 [icon]
@@ -142,18 +142,18 @@ rules = [
 # recolored here (conds); language icons keep their built-in colors.
 # \uf07b = closed folder, \uf07c = open folder (hovered)
 prepend_conds = [
-	{ if = "dir & hovered", text = "\uf07c", fg = "#ffb688" },
-	{ if = "dir",           text = "\uf07b", fg = "#ffb688" },
+	{ if = "dir & hovered", text = "\uf07c", fg = "#ffb779" },
+	{ if = "dir",           text = "\uf07b", fg = "#ffb779" },
 ]
 
 [git]
 # git.yazi: colors of the status signs next to files
-unknown   = { fg = "#52443c" }
-ignored   = { fg = "#52443c" }
+unknown   = { fg = "#51443a" }
+ignored   = { fg = "#51443a" }
 untracked = { fg = "#c58af9" }
 unstaged  = { fg = "#fdd663" }
 staged    = { fg = "#81c995" }
 added     = { fg = "#81c995" }
 deleted   = { fg = "#f28b82" }
 updated   = { fg = "#78d9ec" }
-clean     = { fg = "#52443c" }
+clean     = { fg = "#51443a" }
