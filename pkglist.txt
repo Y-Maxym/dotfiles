@@ -67,6 +67,8 @@ polkit-kde-agent
 poppler
 qt5-wayland
 qt6-wayland
+qt6ct
+qutebrowser
 resvg
 ripgrep
 rofi

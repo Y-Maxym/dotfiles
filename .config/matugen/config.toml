@@ -52,6 +52,16 @@ output_path = "./generated/screenshot-colors.sh"
 input_path = "./templates/starship.toml"
 output_path = "./generated/starship.toml"
 
+[templates.qt6ct]
+input_path = "./templates/qt6ct-colors.conf"
+output_path = "~/.config/qt6ct/colors/matugen.conf"
+
+[templates.qutebrowser]
+input_path = "./templates/qutebrowser-colors.py"
+output_path = "./generated/qutebrowser-colors.py"
+# Reload the colors in a running qutebrowser (does nothing when it is closed)
+post_hook = "pgrep -x qutebrowser >/dev/null && qutebrowser ':config-source' >/dev/null 2>&1"
+
 [templates.yazi]
 input_path = "./templates/yazi-flavor.toml"
 output_path = "~/.config/yazi/flavors/matugen.yazi/flavor.toml"

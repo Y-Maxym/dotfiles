@@ -8,3 +8,6 @@ fi
 export XCURSOR_THEME=Bibata-Modern-Classic
 export XCURSOR_SIZE=24
 export HYPRCURSOR_SIZE=24
+
+# Qt theme: the qt6ct plugin reads ~/.config/qt6ct (Fusion style + matugen color scheme); comment out to disable
+export QT_QPA_PLATFORMTHEME=qt6ct
