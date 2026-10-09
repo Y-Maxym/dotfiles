@@ -67,6 +67,10 @@ hl.bind(mainMod .. " + Tab", hl.dsp.focus({ workspace = "previous" }))
 hl.bind(mainMod .. " + CTRL + H", hl.dsp.focus({ workspace = "e-1" }))
 hl.bind(mainMod .. " + CTRL + L", hl.dsp.focus({ workspace = "e+1" }))
 
+-- Move active window to previous/next workspace: mainMod + CTRL + SHIFT + H/L
+hl.bind(mainMod .. " + CTRL + SHIFT + H", hl.dsp.window.move({ workspace = "e-1" }))
+hl.bind(mainMod .. " + CTRL + SHIFT + L", hl.dsp.window.move({ workspace = "e+1" }))
+
 -- Special workspace (scratchpad)
 hl.bind(mainMod .. " + W",         hl.dsp.workspace.toggle_special("magic"))
 hl.bind(mainMod .. " + SHIFT + W", hl.dsp.window.move({ workspace = "special:magic" }))
