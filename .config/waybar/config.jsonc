@@ -39,7 +39,8 @@
         "tooltip": false,
         "persistent-workspaces": {
             "eDP-1": [1, 2, 3, 4, 5],
-            "HDMI-A-1": [1, 2, 3, 4, 5]
+            "HDMI-A-1": [1, 2, 3, 4, 5],
+            "DP-3": [1, 2, 3, 4, 5]
         }
     },
     

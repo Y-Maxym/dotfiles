@@ -1,5 +1,7 @@
+basedpyright
 bibata-cursor-theme-bin
 google-chrome
+jdtls
 jetbrains-toolbox
 linux-wallpaperengine-git
 sddm-theme-sugar-candy-git

@@ -24,3 +24,11 @@ hl.monitor({
     position = "0x0",
     scale    = "1",
 })
+
+-- External monitor over DisplayPort (USB-C adapter), 240 Hz
+hl.monitor({
+    output   = "DP-3",
+    mode     = "2560x1440@240",
+    position = "0x0",
+    scale    = "1",
+})

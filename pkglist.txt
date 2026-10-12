@@ -5,6 +5,7 @@ angband
 awww
 base
 base-devel
+bash-language-server
 bluetui
 bluez
 bluez-utils
@@ -43,6 +44,7 @@ libpulse
 libva-intel-driver
 linux
 linux-firmware
+lua-language-server
 man-db
 matugen
 mediainfo
@@ -72,8 +74,10 @@ qutebrowser
 resvg
 ripgrep
 rofi
+ruff
 satty
 sddm
+shellcheck
 slurp
 smartmontools
 sof-firmware
@@ -83,6 +87,7 @@ sudo
 swaync
 telegram-desktop
 tree
+tree-sitter-cli
 ttf-jetbrains-mono-nerd
 udisks2
 unzip

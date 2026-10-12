@@ -26,11 +26,11 @@
 
 -- Workspaces per monitor
 -- External monitor: 1–3
-hl.workspace_rule({ workspace = "1", monitor = "HDMI-A-1", default = true, persistent = true })
-hl.workspace_rule({ workspace = "2", monitor = "HDMI-A-1", persistent = true })
-hl.workspace_rule({ workspace = "3", monitor = "HDMI-A-1", persistent = true })
+hl.workspace_rule({ workspace = "1", monitor = "DP-3", default = true, persistent = true })
+hl.workspace_rule({ workspace = "2", monitor = "DP-3", persistent = true })
+hl.workspace_rule({ workspace = "3", monitor = "DP-3", persistent = true })
 
--- Laptop screen: 4–6
+-- Laptop screen: 4–5
 hl.workspace_rule({ workspace = "4", monitor = "eDP-1", default = true, persistent = true })
 hl.workspace_rule({ workspace = "5", monitor = "eDP-1", persistent = true })
 
