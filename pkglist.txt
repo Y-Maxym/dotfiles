@@ -86,6 +86,7 @@ steam
 sudo
 swaync
 telegram-desktop
+timeshift
 tree
 tree-sitter-cli
 ttf-jetbrains-mono-nerd
