@@ -33,3 +33,16 @@
     - [gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark', Setting dark color scheme]
     - [gsettings set org.gnome.desktop.interface cursor-theme 'Bibata-Modern-Classic', Setting cursor theme]
     - [gsettings set org.gnome.desktop.interface cursor-size 24, Setting cursor size]
+
+# TLP services (packages come from pkglist.txt; sudo asks for a password, so stdin is on)
+- shell:
+    - command: sudo systemctl enable --now tlp.service tlp-pd.service
+      description: Enabling TLP services
+      stdin: true
+      stdout: true
+      stderr: true
+    - command: sudo systemctl mask systemd-rfkill.service systemd-rfkill.socket
+      description: Masking systemd-rfkill (TLP manages radio state)
+      stdin: true
+      stdout: true
+      stderr: true

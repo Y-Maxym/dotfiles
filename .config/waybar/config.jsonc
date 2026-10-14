@@ -159,6 +159,7 @@
         },
         "format": "{capacity}% {icon}",
         "format-charging": "{capacity}% ",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": ["", "", "", "", ""],
+        "on-click-right": "case $(tlpctl get) in power-saver) tlpctl set balanced; notify-send -t 1500 'Power profile' 'balanced' ;; balanced) tlpctl set performance; notify-send -t 1500 'Power profile' 'performance' ;; *) tlpctl set power-saver; notify-send -t 1500 'Power profile' 'power-saver' ;; esac"
     }
 }

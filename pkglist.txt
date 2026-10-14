@@ -87,6 +87,8 @@ sudo
 swaync
 telegram-desktop
 timeshift
+tlp
+tlp-pd
 tree
 tree-sitter-cli
 ttf-jetbrains-mono-nerd
