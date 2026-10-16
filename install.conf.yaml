@@ -10,6 +10,8 @@
     ~/.config/waybar: .config/waybar
     ~/.config/rofi: .config/rofi
     ~/.config/yazi: .config/yazi
+    ~/.config/mpd: .config/mpd
+    ~/.config/rmpc: .config/rmpc
     ~/.config/uwsm: .config/uwsm
     ~/.config/wlogout: .config/wlogout
     ~/.config/zsh: .config/zsh
@@ -46,3 +48,7 @@
       stdin: true
       stdout: true
       stderr: true
+
+# mpd user service (config is linked above; no sudo needed, but needs a running user session like the gsettings block)
+- shell:
+    - [systemctl --user enable --now mpd.service, Enabling mpd user service]

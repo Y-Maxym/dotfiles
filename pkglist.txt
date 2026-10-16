@@ -49,6 +49,8 @@ man-db
 matugen
 mediainfo
 mkinitcpio
+mpc
+mpd
 mpv
 nano
 neovim
@@ -73,6 +75,7 @@ qt6ct
 qutebrowser
 resvg
 ripgrep
+rmpc
 rofi
 ruff
 satty
